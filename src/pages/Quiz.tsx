@@ -74,7 +74,7 @@ export function Quiz() {
         setNewAnswerList(newAnswerList.filter(newAnswer => (newAnswer.id !== id)))
     }
 
-    function handleNewQuestion(e: FormEvent) {
+    async function handleNewQuestion(e: FormEvent) {
         e.preventDefault()
         const answers: any= []
         newAnswerList.forEach((answer) => {
@@ -89,7 +89,11 @@ export function Quiz() {
             answers: answers
         }
 
-        api.post('questions/', question)
+        await api.post('questions/', question)
+        await api.get(`quiz/${id}/`).then(response => {
+            setQuiz(response.data)
+            setQuestions(response.data.questions)
+        })
     }
 
     function handleUpdateAnswer(text: string | undefined, id: number, true_or_false: boolean | undefined) {
