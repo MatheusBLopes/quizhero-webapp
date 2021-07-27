@@ -1,0 +1,9 @@
+.delete-quiz-button {
+    margin-left: 64px;
+}
+
+.new-quiz-container > form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
