@@ -1,0 +1,48 @@
+$primary-green: #52B788;
+$primary-red: #E73F5D;
+$main-background: #121212;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #121212;
+    color: #ffffff;
+    height: 100vh;
+}
+
+html {
+    height: 100vh
+}
+
+body, input, button, textarea {
+    font: 400 16px 'Roboto', sans-serif;
+
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    height: 48px;
+    background-color: $primary-green;
+}
+
+.cancel-button {
+    background-color: $primary-red;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+  }
+
+::-webkit-scrollbar-track {
+background: rgba(0, 0, 0, 0.0);
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #333333;
+
+}
